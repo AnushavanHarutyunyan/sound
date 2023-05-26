@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="background_img"></div>
+        <div class="wrapper">
+            <h1 class="header">Weather sounds</h1>
+            <div class="sound_block block_sum" id="#sum">
+                <img class="icon" src="./assets/icons/sun.svg" width="200px" height="200px" />
+                <img src="../sound/assets/summer-bg.jpg" class="img" />
+            </div>
+            <div class="sound_block block_winter" id="#rain">
+                <img class ="icon" src="./assets/icons/cloud-rain.svg" width="200px" height="200px" />
+                <img src="../sound/assets/rainy-bg.jpg" class="img" />
+            </div>
+            <div class="sound_block block_rain" id="#winter">
+                <img class="icon" src="./assets/icons/cloud-snow.svg" width="200px" height="200px" />
+                <img src="../sound/assets/winter-bg.jpg" class="img" />
+            </div>
+            <div class="range">
+                <input type="range" />
+                <div>
+                    <audio id="audio" preload="none" >
+                        <source src="./assets/sounds/rain.mp3" type="audio/mpeg" id="rain_source"/>
+                        <source src="./assets/sounds/summer.mp3" type="audio/ogg" id="summer_source"/>
+                        <source src="./assets/sounds/winter.mp3" type="audio/ogg" id="winter_source"/>
+                    </audio>
+                </div>
+            </div>
+            <div class="game_bord">
+                <table class="game_table" border="0" cellspacing="10" cellpadding="5">
+                </table>
+                <form >
+                    <input class="inputRow" type="number" value="0" placeholder="plaese enter row" />
+                    <input class="inputColumn" type="number" value="0" placeholder="plaese enter column" />
+                    <input class="inputBomb" type="number" value="0" placeholder="plaese enter bombs number" />
+                    <button class="playButton">Play</button>
+                    <button class="restartButton">Restart</button>
+                </form>
+            </div>
+        </div>
+        <script src="./scrypt/index.js"></script>
+        <script src="./scrypt/game.js"></script>
+
+    </body>
+</html>
